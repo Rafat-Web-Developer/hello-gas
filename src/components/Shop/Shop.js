@@ -23,7 +23,11 @@ const Shop = () => {
         }else{
             const findProduct = products.find(product => product.id === selectedProductId);
             newCartProducts = [...cartProducts, findProduct];
-            setCartProducts(newCartProducts);
+            if(newCartProducts.length < 5){
+                setCartProducts(newCartProducts);
+            }else{
+                alert("You can't add product. Because you already added 4 products.");
+            }
         }
     }
 
