@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "question": "How react works?",
+        "ans": "React create a virtual DOM. Virtual DOM is not as original dom. In React, whenever a component state changes, the changes are reflected in Virtual DOM. Thus, Virtual DOM has the updated state of the component. React compare the updated dom with the virtual dom and update only the changes part of the node."
+    },
+    {
+        "id": 2,
+        "question": "Props VS State : ",
+        "ans": "Props : Props are use to pass data from one component to another component. Props can't change. Props always return an object. State : State can change. State only excess from specific component. It means state is local in component. For every state change the component will render again."
+    },
+    {
+        "id": 3,
+        "question": "How useState() works?",
+        "ans": "Hooks is an interesting part of react. useState() is one kind of hooks. useState() always return a current variable and a function. That function is used to change the variable of the current state. We can set initial value of a state."
+    }
+]
