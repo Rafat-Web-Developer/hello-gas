@@ -6,7 +6,10 @@ const Cart = ({cartProducts}) => {
     let count = 0;
     count = cartProducts.length;
 
-    let randomNumber = Math.round(Math.round(Math.random()*10)/3);
+    const chooseOneProduct = () => {
+        let randomNumber = Math.round(Math.round(Math.random()*10)/3);
+        alert(`You choose ${cartProducts[randomNumber].name}. And it's price is ${cartProducts[randomNumber].price}`);
+    }
 
     return (
         <div className='mt-3 sticky-top'>
@@ -19,7 +22,7 @@ const Cart = ({cartProducts}) => {
             </div>
             <div className='text-center'>
                 <div className='my-2'>
-                    <button className='btn btn-success'>Choose 1 for you</button>
+                    <button className='btn btn-success' onClick={chooseOneProduct}>Choose 1 for you</button>
                 </div>
                 <div>
                     <button className='btn btn-danger'>Choose Again</button>
