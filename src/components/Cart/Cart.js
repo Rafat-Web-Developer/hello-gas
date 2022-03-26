@@ -13,6 +13,11 @@ const Cart = ({cartProducts, clickChooseAgain}) => {
         setSelectedOneItem(cartProducts[randomNumber]);
     }
 
+    const chooseAgainAndRemoveAll = () => {
+        setSelectedOneItem("");
+        clickChooseAgain();
+    }
+
 
     return (
         <div className='mt-3 sticky-top'>
@@ -33,7 +38,7 @@ const Cart = ({cartProducts, clickChooseAgain}) => {
                     <button className='btn btn-success' onClick={chooseOneProduct}>Choose 1 for you</button>
                 </div>
                 <div>
-                    <button className='btn btn-danger' onClick={clickChooseAgain}>Choose Again</button>
+                    <button className='btn btn-danger' onClick={chooseAgainAndRemoveAll}>Choose Again</button>
                 </div>
             </div>
         </div>
