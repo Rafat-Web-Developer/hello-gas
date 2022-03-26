@@ -12,12 +12,16 @@ const Shop = () => {
             .then(data => setProducts(data));
     }, []);
 
+    const handleClickToAddCart = () => {
+        console.log("Clicked");
+    }
+
     return (
         <div className='row my-5'>
             <div className='col-9'>
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                     {
-                        products.map(product => <Product key={product.id} product={product}></Product>)
+                        products.map(product => <Product key={product.id} product={product} handleClick={handleClickToAddCart}></Product>)
                     }
                 </div>
             </div>
