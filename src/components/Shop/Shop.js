@@ -5,6 +5,7 @@ import Product from '../Product/Product';
 const Shop = () => {
 
     const [products, setProducts] = useState([]);
+    const [cartProducts, setCartProducts] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
@@ -12,8 +13,18 @@ const Shop = () => {
             .then(data => setProducts(data));
     }, []);
 
-    const handleClickToAddCart = () => {
-        console.log("Clicked");
+    const handleClickToAddCart = selectedProductId => {
+        let newCartProducts = [];
+
+        const existProduct = cartProducts.find(product => product.id === selectedProductId);
+        
+        if(existProduct){
+            alert("You can't add this product. Because it's already added in cart.");
+        }else{
+            const findProduct = products.find(product => product.id === selectedProductId);
+            newCartProducts = [...cartProducts, findProduct];
+            setCartProducts(newCartProducts);
+        }
     }
 
     return (
@@ -26,7 +37,7 @@ const Shop = () => {
                 </div>
             </div>
             <div className='col-3 bg-primary rounded-3'>
-                <Cart></Cart>
+                <Cart cartProducts={cartProducts}></Cart>
             </div>
         </div>
     );
