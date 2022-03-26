@@ -1,7 +1,7 @@
 # Hello GAS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live site link : [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Description
 
-In the project directory, you can run:
+This is a simple react application. It's a simple gas order web application. This application created by Rafat Hossain.
