@@ -4,6 +4,7 @@ import Product from '../Product/Product';
 
 const Shop = () => {
 
+    // ---->States<----
     const [products, setProducts] = useState([]);
     const [cartProducts, setCartProducts] = useState([]);
 
@@ -13,6 +14,7 @@ const Shop = () => {
             .then(data => setProducts(data));
     }, []);
 
+    // ----->click handler for add to cart button<--- 
     const handleClickToAddCart = selectedProductId => {
         let newCartProducts = [];
 
@@ -31,6 +33,7 @@ const Shop = () => {
         }
     }
 
+    // ---->Click Choose Again Button<----
     const handleChooseAgain = () => {
         setCartProducts([]);
     }
