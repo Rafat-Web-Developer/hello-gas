@@ -1,6 +1,6 @@
 # Hello GAS
 
-Live site link : [Create React App](https://github.com/facebook/create-react-app).
+Live site link : [Hello Gas](https://hello-gas.netlify.app/).
 
 ### Description
 
