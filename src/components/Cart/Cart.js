@@ -11,7 +11,7 @@ const Cart = ({cartProducts}) => {
             {count === 0 && <h5 className='text-center'>Empty cart</h5>}
             <div>
                 {
-                    cartProducts.map(product => <CartProduct key={product.id}></CartProduct>)
+                    cartProducts.map(product => <CartProduct key={product.id} cartProduct={product}></CartProduct>)
                 }
             </div>
         </div>
