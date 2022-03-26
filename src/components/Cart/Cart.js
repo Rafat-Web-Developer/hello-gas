@@ -17,7 +17,7 @@ const Cart = ({cartProducts}) => {
             </div>
             <div className='text-center'>
                 <div className='my-2'>
-                    <button className='btn btn-success'>Choose One</button>
+                    <button className='btn btn-success'>Choose 1 for you</button>
                 </div>
                 <div>
                     <button className='btn btn-danger'>Choose Again</button>
