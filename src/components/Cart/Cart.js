@@ -6,6 +6,8 @@ const Cart = ({cartProducts}) => {
     let count = 0;
     count = cartProducts.length;
 
+    let randomNumber = Math.round(Math.round(Math.random()*10)/3);
+
     return (
         <div className='mt-3 sticky-top'>
             <h3 className='text-center text-white mb-4'>Your Cart</h3>
