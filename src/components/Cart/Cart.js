@@ -1,7 +1,7 @@
 import React from 'react';
 import CartProduct from '../CartProduct/CartProduct';
 
-const Cart = ({cartProducts}) => {
+const Cart = ({cartProducts, clickChooseAgain}) => {
 
     let count = 0;
     count = cartProducts.length;
@@ -10,6 +10,7 @@ const Cart = ({cartProducts}) => {
         let randomNumber = Math.round(Math.round(Math.random()*10)/3);
         alert(`You choose ${cartProducts[randomNumber].name}. And it's price is ${cartProducts[randomNumber].price}`);
     }
+
 
     return (
         <div className='mt-3 sticky-top'>
@@ -25,7 +26,7 @@ const Cart = ({cartProducts}) => {
                     <button className='btn btn-success' onClick={chooseOneProduct}>Choose 1 for you</button>
                 </div>
                 <div>
-                    <button className='btn btn-danger'>Choose Again</button>
+                    <button className='btn btn-danger' onClick={clickChooseAgain}>Choose Again</button>
                 </div>
             </div>
         </div>

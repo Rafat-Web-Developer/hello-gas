@@ -31,6 +31,10 @@ const Shop = () => {
         }
     }
 
+    const handleChooseAgain = () => {
+        setCartProducts([]);
+    }
+
     return (
         <div className='row my-5'>
             <div className='col-6 col-md-9'>
@@ -41,7 +45,7 @@ const Shop = () => {
                 </div>
             </div>
             <div className='col-6 col-md-3 bg-primary rounded-3'>
-                <Cart cartProducts={cartProducts}></Cart>
+                <Cart cartProducts={cartProducts} clickChooseAgain={handleChooseAgain}></Cart>
             </div>
         </div>
     );
