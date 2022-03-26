@@ -4,6 +4,7 @@ import CartProduct from '../CartProduct/CartProduct';
 const Cart = ({cartProducts}) => {
 
     let count = 0;
+    count = cartProducts.length;
 
     return (
         <div className='mt-3 sticky-top'>
@@ -13,6 +14,14 @@ const Cart = ({cartProducts}) => {
                 {
                     cartProducts.map(product => <CartProduct key={product.id} cartProduct={product}></CartProduct>)
                 }
+            </div>
+            <div className='text-center'>
+                <div className='my-2'>
+                    <button className='btn btn-success'>Choose One</button>
+                </div>
+                <div>
+                    <button className='btn btn-danger'>Choose Again</button>
+                </div>
             </div>
         </div>
     );
